@@ -8,11 +8,20 @@ public class PruebaRun {
 	public static void main(String[] args) {
 		try{
 			
-		Process  aplicacion = Runtime.getRuntime().exec ("/usr/bin/chromium.browser"); 
-		
+			Runtime  aplicacion = Runtime.getRuntime(); 
+			Process process = aplicacion.exec("/usr/bin/chromium-browser");
+			
+			// gnome-calculator
+			// gnome-text-editor
+			// gnome-terminal
+			// chromium-browser
+			
+			
+			process.waitFor();
 		}
         catch(Exception e){}
-
+			
+			System.out.println("La aplicacion se ha cerrado");
 	}
 
 }
